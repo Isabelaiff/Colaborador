@@ -23,11 +23,9 @@ jobs:
         distribution: 'temurin'
     - name: Build with project
       run: |
-        cd src
+          cd src
           javac -cp . Main.java
           
-          steps:
-    
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Build & push Docker image
       with:
